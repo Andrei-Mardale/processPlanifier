@@ -6,7 +6,7 @@ A C process planifier which simulates the way an operating system handles runnin
 #Context
 Each process has a given priority and they are kept in a priority queue. At any time an event may occur and some processes may depend on this event. In this case they are removed from the queue and added to a stack associated with this event. When the event finishes, the stack is emptied and the processes are added back to the queue.
 
-The stack and queue are implemented using single linked lists.
+The stack and queue are implemented using singly linked lists.
 
 As a constraint, the number of possible events is given at the beginning of the program.
 
