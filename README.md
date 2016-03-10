@@ -1,7 +1,7 @@
 #processPlanifier
 My second Data Structures homework
 
-A C process planifier which simulates the way an operating system handles running processes with a given priority and the events on which a process may depend. It uses the (priority) queue and stack data structures in order to achieve this functionality
+A C process planifier which simulates the way an operating system handles running processes with a given priority and the events on which a process may depend. It uses the (priority) queue and stack data structures in order to achieve this functionality.
 
 #Context
 Each process has a given priority and they are kept in a priority queue. At any time an event may occur and some processes may depend on this event. In this case they are removed from the queue and added to a stack associated with this event. When the event finishes, the stack is emptied and the processes are added back to the queue.
