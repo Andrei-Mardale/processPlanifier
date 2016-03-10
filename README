@@ -1,0 +1,28 @@
+Functiile standard pentru liste, stive si cozi sunt implementate in fisierele corespunzatoare.
+
+Functia main face niste verificari de baza (destule argumente la intrare, daca exista fisierele etc) si deschide fisierele de intrare iesire, apoi apeleaza functia parse.
+
+Functia parse efectueaza urmatorii pasi:
+1) Citeste prima linie si aloca stivele pentru evenimente.
+2) Aloca memoria pentru coada
+3) Citeste din fisierul de intrare linie cu linie si tokenizeaza inputul.
+4) Se compara primul cuvant al comenzii cu cele cunoscute si apeleaza functiile corespunzatoare.
+5) Se elibereaza memoria pentru stive, coada si buffer.
+
+Pe tot parcursul programului am incercat sa adaug verificari pentru fiecare alocare de memorie astfel incat daca ceva merge prost sa pot iesi din program intr-un mod "curat".
+Alternativa ar fi sa fac verificarea ad-hoc si sa nu transmit rezultatul mai departe, apeland functia exit().
+
+Algoritmi functii cerute.
+
+Start X Y
+Creez structura si o introduc ordonat in coada.
+
+Wait E X
+Extrag din coada element cu element pana cand ramane vida. Copiez toate elementele mai putin X intr-o coada auxiliara, iar pe X il pun in stiva corespunzatoare.
+Am ales sa inlocuiesc coada veche (care ramane goala) cu coada auxiliara folosita din ratiuni de eficienta. Pentru a face acest lucru eliberez coada veche, apoi variabila ia valorea coadei auxiliare. Pentru asta trebuie sa transmit coada prin referinta.
+
+Event E
+Extrag elementele din stiva si le introduc ordonat in coada.
+
+End X
+Extrag din coada element cu element pana cand ramane vida. Adaug in coada auxiliara toate elementele mai putin X. Coada auxiliara devine noua coada (la fel ca la Wait).
